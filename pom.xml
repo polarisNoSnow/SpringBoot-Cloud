@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.polaris</groupId>
+	<artifactId>SpringBoot-Cloud</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	
+	<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-cloud.version>Dalston.SR4</spring-cloud.version>
+        <java.version>1.7</java.version>
+    </properties>
+
+	<modules>
+		<module>SpringBoot-Cloud-API</module>
+		<module>SpringBoot-Cloud-Server</module>
+		<module>SpringBoot-Cloud-Eureka</module>
+		<module>SpringBoot-Cloud-Restful</module>
+		<module>SpringBoot-Cloud-Ribbon</module>
+		<module>SpringBoot-Cloud-Feign</module>
+		<module>SpringBoot-Cloud-Zuul</module>
+		<module>SpringBoot-Cloud-Config-Server</module>
+		<module>SpringBoot-Cloud-Config-Client</module>
+		<module>SpringBoot-Cloud-Server-Zipkin</module>
+		<module>SpringBoot-Cloud-Zipkin-Hi</module>
+		<module>SpringBoot-Cloud-Zipkin-Miya</module>
+		<module>SpringBoot-Cloud-Consul-miya</module>
+		<module>SpringBoot-Restful</module>
+	</modules>
+	
+	 <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>   
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- 热部署 -->
+			<!-- <dependency>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-devtools</artifactId>
+			    <optional>true</optional>
+			    <scope>true</scope>
+			</dependency> -->
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

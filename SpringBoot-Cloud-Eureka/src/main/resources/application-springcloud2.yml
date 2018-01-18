@@ -1,0 +1,11 @@
+server:
+  port: 8760
+
+spring:
+  profiles: springcloud2
+eureka:
+  instance:
+    hostname: springcloud2
+  client:
+    serviceUrl:
+      defaultZone: http://springcloud1:8759/eureka/,http://springcloud3:8761/eureka/

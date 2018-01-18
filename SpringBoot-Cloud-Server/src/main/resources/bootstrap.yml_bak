@@ -1,0 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://springcloud1:8759/eureka/,http://springcloud2:8760/eureka/
+server:
+  port: 9004
+spring:
+  application:
+    name: EUREKA-SERVER-HI

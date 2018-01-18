@@ -1,0 +1,35 @@
+####默认配置修改
+
+####servlet容器配置
+server.port=8761
+server.address=127.0.0.1
+server.sessionTimeout=1*3600
+#server.contextPath=/polaris/eurekaServer/
+#自定义参数
+app.name=freeStyle
+log4jConf.path=/home/logs/
+
+####日志配置
+#debug=true
+logging.file=C:/Users/tyb/Desktop/springBoot.log
+logging.level.org.hibernate=DEBUG
+
+####数据库配置
+#spring.datasource.url=jdbc:mysql://localhost:port/test
+#spring.datasource.username=test
+#spring.datasource.password=test
+#spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+####服务注册
+# spring boot服务注册到Eureka Server上的应用名称
+  spring.application.name=eureka-register-center
+  eureka.instance.hostname=springcloud2
+####是否将自身注册
+  eureka.client.registerWithEureka=true
+####去获取注册，如果为true，启动时报警
+  eureka.client.fetchRegistry=false
+####Eureka Server注册服务的地址
+  eureka.client.serviceUrl.defaultZone=http://${eureka.instance.hostname}:8761/eureka/,http://${eureka.instance.hostname}:8760/eureka/
+  ###关闭自我保护，挂掉的服务保留15分钟（时限内恢复也可）
+  eureka.server.enable-self-preservation=false
+  

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>主页面</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="js/RequestService.js"></script>
+<script type="text/javascript" src="modules/common/left-nav.js"></script>
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="polaris">
+<div ng-include="'modules/common/left-nav.html'"></div>
+<div ng-view=""></div>
+</body>
+<script type="text/javascript" src="modules/index/index.js"></script>
+<script type="text/javascript" src="modules/friend/friend.service.js"></script>
+<script type="text/javascript" src="modules/friend/friend.js"></script>
+
+</html>
